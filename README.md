@@ -1,50 +1,107 @@
-# Welcome to your Expo app 👋
+# Task Manager Mobile App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple mobile application built with React Native and Expo to help you manage your daily tasks.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Create Tasks:** Easily add new tasks with a title, optional description, location, and due date/time.
+- **View Tasks:** See a list of all your tasks.
+- **Task Details:** View detailed information for each task.
+- **Update Status:** Change the status of a task (e.g., Pending, In Progress, Completed, Cancelled).
+- **Delete Tasks:** Remove tasks you no longer need.
+- **Sort Tasks:** Sort tasks by date or status.
+- **Persistent Storage:** Tasks are saved locally on your device using AsyncStorage.
 
-   ```bash
-   npm install
-   ```
+## Prerequisites
 
-2. Start the app
+Before you begin, ensure you have met the following requirements:
 
-   ```bash
-   npx expo start
-   ```
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [Expo Go](https://expo.dev/go) app on your iOS or Android device (for testing on a physical device)
+- OR an Android Emulator / iOS Simulator set up on your development machine.
+- [Expo CLI](https://docs.expo.dev/get-started/installation/):
+  ```bash
+  npm install -g expo-cli
+  ```
 
-In the output, you'll find options to open the app in a
+## Getting Started
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Follow these steps to get the project up and running on your local machine.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 1. Clone the Repository (if applicable)
 
-## Get a fresh project
-
-When you're ready, run:
+If you've already cloned it, skip this step.
 
 ```bash
-npm run reset-project
+git clone <your-repository-url>
+cd task-manager
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Navigate to the App Directory
 
-## Learn more
+The main application code is within the `Task_Manager_App` directory.
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+cd Task_Manager_App
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### 3. Install Dependencies
 
-## Join the community
+Install the project dependencies using npm or yarn:
 
-Join our community of developers creating universal apps.
+```bash
+npm install
+# or
+yarn install
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### 4. Running the Application
+
+Once the dependencies are installed, you can start the Expo development server:
+
+```bash
+npm start
+# or
+yarn start
+# or
+expo start
+```
+
+This will open the Expo Developer Tools in your web browser. You can then:
+
+- **Scan the QR code** with the Expo Go app on your physical device.
+- **Run on an Android emulator/device** (press `a` in the terminal).
+- **Run on an iOS simulator/device** (press `i` in the terminal).
+
+## Folder Structure
+
+The core application logic resides within the `Task_Manager_App/app` directory, following the Expo Router file-based routing convention:
+
+```
+task-manager/
+├── Task_Manager_App/
+│   ├── app/
+│   │   ├── _layout.tsx     # Main layout and navigation setup
+│   │   ├── index.tsx       # Home screen (Task List)
+│   │   ├── add.tsx         # Add New Task screen
+│   │   └── [id].tsx        # Task Details screen (dynamic route)
+│   ├── assets/             # Static assets like images, fonts
+│   ├── components/         # (Optional) Reusable UI components
+│   ├── babel.config.js
+│   ├── package.json
+│   └── ... (other Expo project files)
+├── .gitignore
+└── README.md
+```
+
+## Technologies Used
+
+- **React Native:** For building native mobile applications using JavaScript and React.
+- **Expo:** A framework and platform for universal React applications, simplifying development and deployment.
+- **Expo Router:** File-system based routing for React Native apps.
+- **TypeScript:** For static typing and improved code quality.
+- **AsyncStorage:** For local data persistence on the device.
+- **React Native Gesture Handler:** For handling touch gestures.
+- **React Native Safe Area Context:** For handling safe areas on different devices.
+- **@react-native-community/datetimepicker:** For native date and time selection.
