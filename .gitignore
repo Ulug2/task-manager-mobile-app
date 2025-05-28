@@ -1,39 +1,61 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
-# dependencies
+// filepath: /Users/ulykbekkhairulla/Downloads/Computer Science Related/react-native-projects/task-manager/.gitignore
+# Node
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # Expo
 .expo/
 dist/
-web-build/
-expo-env.d.ts
-
-# Native
-.kotlin/
-*.orig.*
 *.jks
 *.p8
 *.p12
-*.key
 *.mobileprovision
+*.orig
+web-build/
 
-# Metro
-.metro-health-check*
+# Android
+android/app/build/
+android/build/
+android/.gradle/
+android/gradle/
+android/gradlew
+android/gradlew.bat
+android/local.properties
+android/app/debug.keystore
+android/app/*.apk
+android/app/*.aab
 
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
+# iOS
+ios/build/
+ios/Pods/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+*.hmap
+*.ipa
 
-# macOS
+# Metro Bundler
+.metro-cache/
+
+# IDE / Editor specific
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
 .DS_Store
-*.pem
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-# local env files
-.env*.local
-
-# typescript
-*.tsbuildinfo
-
-app-example
+# Environment variables
+.env
+.env.*
+!.env.example
