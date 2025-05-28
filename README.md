@@ -74,27 +74,6 @@ This will open the Expo Developer Tools in your web browser. You can then:
 - **Run on an Android emulator/device** (press `a` in the terminal).
 - **Run on an iOS simulator/device** (press `i` in the terminal).
 
-## Folder Structure
-
-The core application logic resides within the `Task_Manager_App/app` directory, following the Expo Router file-based routing convention:
-
-```
-task-manager/
-├── Task_Manager_App/
-│   ├── app/
-│   │   ├── _layout.tsx     # Main layout and navigation setup
-│   │   ├── index.tsx       # Home screen (Task List)
-│   │   ├── add.tsx         # Add New Task screen
-│   │   └── [id].tsx        # Task Details screen (dynamic route)
-│   ├── assets/             # Static assets like images, fonts
-│   ├── components/         # (Optional) Reusable UI components
-│   ├── babel.config.js
-│   ├── package.json
-│   └── ... (other Expo project files)
-├── .gitignore
-└── README.md
-```
-
 ## Technologies Used
 
 - **React Native:** For building native mobile applications using JavaScript and React.
